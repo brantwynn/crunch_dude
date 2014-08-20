@@ -1,0 +1,7 @@
+name = Crunch Dude
+description = Crunchifes the Drupal admin space. Powered by Sullivan a.k.a. The Dude.
+core = 7.x
+dependencies[] = devel
+dependencies[] = ember_support
+dependencies[] = navbar
+stylesheets[all][] = css/dude.css

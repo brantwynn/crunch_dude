@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_ember_support_mods_alter().
+ */
+function crunch_dude_ember_support_mods_alter(&$list) {
+  $list['crunch_dude'] = array(
+    '#title' => t('Crunchify admin interfaces'),
+    '#description' => t('Extend Ember Support to add cat theme to various components.'),
+    '#var' => 'crunch_dude_css',
+    '#add' => array('crunch_dude' => array('/css/dude.css')),
+  );
+}
+

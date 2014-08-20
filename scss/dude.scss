@@ -1,0 +1,13 @@
+/* Sassy CATscading Style Sheet */
+
+/* Navbar overrides */
+.navbar-bar {
+  .navbar-tab {
+    .navbar-icon-user {
+      &:before { background-image: url("../icons/bebebe/cat.svg"); }
+    }
+    .navbar-icon-shortcut {
+      &:before { background-image: url("../icons/bebebe/fish-bone.svg"); }
+    }
+  }
+}
