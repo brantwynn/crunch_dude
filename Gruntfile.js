@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var module_name = 'dude';
+  var project_name = 'dude';
 
   var global_vars = {
-    module_name: module_name,
-    module_css: 'css',
-    module_scss: 'scss'
+    project_name: project_name,
+    project_css: 'css',
+    project_scss: 'scss'
   }
 
   grunt.initConfig({
@@ -17,10 +17,10 @@ module.exports = function(grunt) {
       dist: {
         options: {
           outputStyle: 'compressed',
-          includePaths: ['<%= global_vars.module_scss %>', require('node-bourbon').includePaths[0]]
+          includePaths: ['<%= global_vars.project_scss %>', require('node-bourbon').includePaths[0]]
         },
         files: {
-          '<%= global_vars.module_css %>/<%= global_vars.module_name %>.css': '<%= global_vars.module_scss %>/<%= global_vars.module_name %>.scss'
+          '<%= global_vars.project_css %>/<%= global_vars.project_name %>.css': '<%= global_vars.project_scss %>/<%= global_vars.project_name %>.scss'
         }
       }
     },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: '<%= global_vars.module_scss %>/**/*.scss',
+        files: '<%= global_vars.project_scss %>/**/*.scss',
         tasks: ['sass'],
         options: {
           livereload: true
